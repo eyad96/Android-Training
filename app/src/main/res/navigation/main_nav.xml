@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/main_nav"
+            app:startDestination="@id/testFragment"
+            tools:ignore="UnusedNavigation">
+
+
+    <fragment android:id="@+id/testFragment"
+              tools:layout="@layout/fragment_test"
+              android:name="com.training.app.screens.TestFragment"
+              android:label="TestFragment">
+
+        <action android:id="@+id/action_testFragment_to_test2Fragment"
+                app:destination="@id/test2Fragment"
+                app:enterAnim="@android:anim/fade_in"
+                app:exitAnim="@android:anim/fade_out"
+                app:popEnterAnim="@android:anim/fade_in"
+                app:popExitAnim="@android:anim/fade_out"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/test2Fragment"
+              tools:layout="@layout/fragment_test_2"
+              android:name="com.training.app.screens.Test2Fragment"
+              android:label="Test2Fragment"/>
+
+</navigation>
