@@ -20,16 +20,6 @@ class PermissionsManager {
         ActivityCompat.requestPermissions(context , arrayOf(permission) , requestCode)
     }
 
-    fun onRequestPermissionsResult(context: Context , requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        when (requestCode) {
-            MainActivity.REQUEST_PERMISSION -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                listener.onPermissionGenerated()
-            } else {
-                listener.onPermissionNotGenerated()
-            }
-        }
-    }
-
     fun addListener(listener: PermissionListener) {
         this.listener = listener
     }

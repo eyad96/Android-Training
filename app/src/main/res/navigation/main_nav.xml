@@ -18,6 +18,8 @@
                 app:exitAnim="@android:anim/fade_out"
                 app:popEnterAnim="@android:anim/fade_in"
                 app:popExitAnim="@android:anim/fade_out"/>
+        <action android:id="@+id/action_testFragment_to_listenerTest" app:destination="@id/listenerTest"/>
+        <action android:id="@+id/action_testFragment_to_mathFragment" app:destination="@id/mathFragment"/>
 
     </fragment>
 
@@ -25,5 +27,10 @@
               tools:layout="@layout/fragment_test_2"
               android:name="com.training.app.screens.Test2Fragment"
               android:label="Test2Fragment"/>
+
+    <fragment android:id="@+id/listenerTest" android:name="com.training.app.fakeApi.ListenerTest"
+              android:label="ListenerTest"/>
+    <fragment android:id="@+id/mathFragment" android:name="com.training.app.math.MathFragment"
+              android:label="MathFragment"/>
 
 </navigation>

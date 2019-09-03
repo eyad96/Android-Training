@@ -1,5 +1,6 @@
 package com.training.app.screens
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.pixplicity.easyprefs.library.Prefs
 import com.training.app.R
+import com.training.app.recyclerview.RecyclerViewExampleScreen
 import kotlinx.android.synthetic.main.fragment_test.*
 
 /**
@@ -29,6 +31,11 @@ class TestFragment : Fragment() {
 
         navButton.setOnClickListener {
             findNavController().navigate(R.id.action_testFragment_to_test2Fragment)
+        }
+
+        showRecyclerView.setOnClickListener {
+//            startActivity(Intent(activity!! , RecyclerViewExampleScreen::class.java))
+            findNavController().navigate(R.id.action_testFragment_to_mathFragment)
         }
 
         button.setOnClickListener {
