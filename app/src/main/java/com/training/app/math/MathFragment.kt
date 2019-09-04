@@ -8,8 +8,15 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.training.app.R
 import kotlinx.android.synthetic.main.fragment_math.*
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class MathFragment : Fragment() {
+
+    var retrofit = Retrofit.Builder()
+        .baseUrl("http://192.168.1.12:8090/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
 
     private val mathManager: MathManager by lazy {
         MathManager()

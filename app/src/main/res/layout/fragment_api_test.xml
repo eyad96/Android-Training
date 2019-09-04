@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <EditText android:layout_width="match_parent"
+              android:id="@+id/ApiEmail"
+              android:hint="Email"
+              android:layout_height="wrap_content"/>
+
+    <EditText android:layout_width="match_parent"
+              android:id="@+id/ApiPass"
+              android:hint="pass"
+              android:layout_height="wrap_content"/>
+
+    <Button android:layout_width="match_parent"
+            android:id="@+id/ApiButton"
+            android:layout_height="wrap_content"/>
+
+    <ProgressBar android:layout_width="wrap_content"
+                 android:id="@+id/Progress"
+                 android:visibility="gone"
+                 android:layout_height="wrap_content"/>
+
+    <TextView android:layout_width="match_parent"
+              android:id="@+id/ApiResponseText"
+              android:layout_height="wrap_content"/>
+
+</LinearLayout>

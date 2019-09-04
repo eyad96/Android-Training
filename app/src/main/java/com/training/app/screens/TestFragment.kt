@@ -12,6 +12,8 @@ import com.pixplicity.easyprefs.library.Prefs
 import com.training.app.R
 import com.training.app.recyclerview.RecyclerViewExampleScreen
 import kotlinx.android.synthetic.main.fragment_test.*
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 /**
  * https://developer.android.com/guide/navigation/navigation-getting-started
@@ -20,14 +22,16 @@ import kotlinx.android.synthetic.main.fragment_test.*
 
 class TestFragment : Fragment() {
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_test, container , false)
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        OpenApiFragment.setOnClickListener {
+            findNavController().navigate(R.id.action_testFragment_to_apiFragment)
+        }
 
         navButton.setOnClickListener {
             findNavController().navigate(R.id.action_testFragment_to_test2Fragment)

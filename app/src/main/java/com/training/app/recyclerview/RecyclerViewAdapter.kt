@@ -8,9 +8,17 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.training.app.R
 import kotlinx.android.synthetic.main.row_recyclerview.view.*
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class RecyclerViewAdapter(private val data: ArrayList<User>) :
     RecyclerView.Adapter<MyViewHolder>() {
+
+
+    var retrofit = Retrofit.Builder()
+        .baseUrl("http://192.168.1.12:8090/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
 
     lateinit var context: Context
 
