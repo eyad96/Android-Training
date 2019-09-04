@@ -20,7 +20,7 @@
                 app:popExitAnim="@android:anim/fade_out"/>
         <action android:id="@+id/action_testFragment_to_listenerTest" app:destination="@id/listenerTest"/>
         <action android:id="@+id/action_testFragment_to_mathFragment" app:destination="@id/mathFragment"/>
-        <action android:id="@+id/action_testFragment_to_apiFragment" app:destination="@id/apiFragment"/>
+        <action android:id="@+id/action_testFragment_to_foodFragment" app:destination="@id/foodFragment"/>
 
     </fragment>
 
@@ -33,7 +33,7 @@
               android:label="ListenerTest"/>
     <fragment android:id="@+id/mathFragment" android:name="com.training.app.math.MathFragment"
               android:label="MathFragment"/>
-    <fragment android:id="@+id/apiFragment" android:name="com.training.app.apiRequest.ApiFragment"
-              android:label="ApiFragment"/>
+    <fragment android:id="@+id/foodFragment" android:name="com.training.app.foodExample.FoodFragment"
+              android:label="FoodFragment"/>
 
 </navigation>

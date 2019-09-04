@@ -29,8 +29,8 @@ class TestFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        OpenApiFragment.setOnClickListener {
-            findNavController().navigate(R.id.action_testFragment_to_apiFragment)
+        FoodFragmentButton.setOnClickListener {
+            findNavController().navigate(R.id.action_testFragment_to_foodFragment)
         }
 
         navButton.setOnClickListener {

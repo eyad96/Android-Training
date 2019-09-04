@@ -55,4 +55,12 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             android:layout_marginTop="36dp" app:layout_constraintTop_toBottomOf="@+id/ShowPref"
             app:layout_constraintHorizontal_bias="0.498"/>
+
+    <Button android:layout_width="wrap_content"
+            android:id="@+id/FoodFragmentButton"
+            android:text="Food Fragment"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/OpenApiFragment"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
